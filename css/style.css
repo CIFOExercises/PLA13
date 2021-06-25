@@ -224,10 +224,6 @@ select {
     justify-content: center;
 }
 
-#mantenimiento-escuelas .section-footer{
-    justify-content: flex-end;
-}
-
 #mantenimiento-escuelas input{
     height: 40px;
 }
@@ -251,4 +247,62 @@ select {
 #mantenimiento-escuelas .deleteCenter{
     background-color: red;
     color: white;
+}
+
+.back{
+    justify-content: flex-end;
+}
+
+/** Mantenimiento Estudiantes **/
+
+#mantenimiento-estudiantes section{
+    width: 80%;
+}
+
+.nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-item{
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+}
+
+.nav-item:last-of-type{
+    border: none;
+}
+
+.nav a {
+    color: lightcyan;
+}
+
+.nav a:active{
+    color: yellow;
+}
+
+.inactive-link {
+    pointer-events: none;
+    cursor: default;
+    color: grey!important;
+}
+
+.component-container{
+    border: 1px solid grey;
+    height: 300px;
+    flex-direction: column;
+    justify-content: unset!important;
+}
+
+.component-container h3{
+    margin: 4px 0;
+}
+
+label[name="formador"]{
+    display: inline-block;
 }

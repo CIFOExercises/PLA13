@@ -1,0 +1,1 @@
+import { getAllProfesors } from "./getAllProfesors.js";
