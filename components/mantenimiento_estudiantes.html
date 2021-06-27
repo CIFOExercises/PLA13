@@ -1,0 +1,56 @@
+<h3>Baixa / modificació estudiants</h3>
+<form id="formMantenimiento">
+    <div class="firstFields">
+        <div>
+            <div>
+                <label for="name">Nom: </label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div>
+                <label for="user">Usuari: </label>
+                <input id="user" name="user" type="text" readonly disabled>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" name="email" type="text">
+            </div>
+        </div>
+        <div>
+            <img id="avatar" src="../img/icono_ayuda.png" alt="asdad">
+        </div>
+
+    </div>
+
+    <div>
+        <label for="teacher">Formador: </label>
+        <select id="teacher" name="teacher" disabled>
+        <option value=""></option>
+    </select>
+    </div>
+
+    <div>
+        <label for="image">Foto: </label>
+        <input id="image" name="image" type="file">
+    </div>
+    <hr>
+    <div>
+        <label for="changeTo">Canviar a: </label>
+        <select id="changeTo" name="changeTo">
+        <option value=""></option>
+    </select>
+    </div>
+
+    <div>
+        <label for="groups">Grups Alumne: </label>
+        <select id="groups" name="groups" multiple size="3" disabled>
+        <option value=""></option>
+    </select>
+    </div>
+
+    <div>
+        <input id="modificar" type="submit" value="Modificar">
+        <input id="baixa" type="submit" value="Baixa">
+    </div>
+</form>
+
+<script src="../js/mantenimiento_estudiantes.js" type="module"></script>

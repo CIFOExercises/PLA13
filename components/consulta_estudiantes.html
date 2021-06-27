@@ -1,11 +1,11 @@
 <h3>Alumnes de la plataforma</h3>
-<div>
-    <label for="formador">Formador: </label>
-    <select name="formador" id="formador">
+<div id="consultaFields">
+    <label for="teacher">Formador: </label>
+    <select id="teacher" name="teacher">
         <option value="all-teachers">All teachers</option>
     </select>
 </div>
-<table>
+<table id="consultaTable">
     <tr>
         <th>Id</th>
         <th>Name</th>
@@ -18,4 +18,4 @@
     </tr>
 </table>
 <div class="pagination"></div>
-<script type="module" src="../js/consulta-estudiante.js"></script>
+<script src="../js/consulta_estudiantes.js" type="module"></script>

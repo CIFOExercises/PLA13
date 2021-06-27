@@ -5,7 +5,6 @@
         $seccion = $opcion[0].'_estudiantes.html';
     } 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +42,7 @@
             </div>
         </section>
     </main>
-    <script type="module" src="js/mantenimiento-estudiantes.js"></script>
+    <script src="js/mantenimiento-estudiantes.js" type="module"></script>
 </body>
 
 </html>
