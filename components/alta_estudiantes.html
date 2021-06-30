@@ -6,11 +6,11 @@
     <input id="user" name="user" type="text">
 
     <label for="email">Email: </label>
-    <input id="email" name="email" type="text">
+    <input id="email" name="email" type="email">
 
     <label for="teacher">Formador: </label>
     <select id="teacher" name="teacher">
-        <option value="test">Test</option>
+        
     </select>
 
     <label for="image">Foto: </label>
@@ -19,9 +19,14 @@
     <hr>
 
     <label for="addTo">Afegir a: </label>
-    <input id="addTo" name="addTo" type="text">
+    <select id="addTo" name="addTo">
+        <option value="0">Select Group</option>
+    </select>
 
-    <input type="submit" value="Afegir">
-    <input type="reset" value="Netejar">
+    <div class="buttons">
+        <input type="submit" id="submit" value="Afegir">
+        <input type="reset" value="Netejar">
+    </div>
+
 </form>
 <script src="../js/alta_estudiantes.js" type="module"></script>

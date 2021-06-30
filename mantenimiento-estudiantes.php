@@ -28,9 +28,9 @@
                 <h2>Consulta / Manteniment Estudiants</h2>
             </div>
             <div class="nav">
-                <a class="nav-item" href="?consulta">Consulta</a>
-                <a class="nav-item" href="?alta">Alta</a>
-                <a class="nav-item inactive-link" href="?mantenimiento">Manteniment</a>
+                <a class="nav-item" id="nav-consulta" href="?consulta">Consulta</a>
+                <a class="nav-item" id="nav-alta" href="?alta">Alta</a>
+                <a class="nav-item inactive-link" id="nav-mantenimiento" href="?mantenimiento">Manteniment</a>
             </div>
             <div class="section-body">
                 <div class="component-container">
