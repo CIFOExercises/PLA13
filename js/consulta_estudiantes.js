@@ -49,18 +49,22 @@ function appendTable(alumnos) {
 
     document.querySelectorAll(".table-item").forEach(item => {
         item.onclick = selectAlumno;
-        console.log(item)
     })
 }
 
 function selectAlumno(e) {
     document.querySelectorAll(".table-item").forEach(item => {
         item.style.backgroundColor = "transparent"
+        if (item.hasAttribute('selected')) item.removeAttribute('selected')
     })
     e.target.parentNode.style.backgroundColor = "white"
     e.target.parentNode.setAttribute('selected', true)
 
+    sessionStorage.setItem("selectedAlumno", document.querySelector(".table-item[selected]").children[0].textContent)
+
     document.querySelector("#nav-mantenimiento").classList.remove('inactive-link')
+
+
 }
 
 async function fillTeacherSelect() {
