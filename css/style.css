@@ -3,336 +3,353 @@
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    height: 100%;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h2 {
-    margin: 0;
+  margin: 0;
 }
 
 input:disabled {
-    cursor: not-allowed !important;
-    opacity: 0.5;
-    filter: grayscale(100);
+  cursor: not-allowed !important;
+  opacity: 0.5;
+  filter: grayscale(100);
 }
-
 
 /** UTILS **/
 
 .link-border {
-    padding-bottom: 10px;
-    border-bottom: 1px solid grey;
-    margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
 }
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
-
 
 /** HEADER **/
 
 header {
-    background-color: #ffaa00;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 10px solid #a587a6;
-    text-transform: uppercase;
-    height: 80px;
+  background-color: #ffaa00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 10px solid #a587a6;
+  text-transform: uppercase;
+  height: 80px;
 }
-
 
 /** MAIN **/
 
 main {
-    background-color: #e6db9a;
-    display: flex;
-    justify-content: space-around;
-    min-height: calc(100% - 80px);
-    padding-top: 50px;
+  background-color: #e6db9a;
+  display: flex;
+  justify-content: space-around;
+  min-height: calc(100% - 80px);
+  padding-top: 50px;
 }
-
 
 /** SECTION **/
 
 section {
-    background-color: #27f4bd;
-    width: calc(100vw / 3);
-    /* min-width: 400px; */
-    height: fit-content;
-    border-radius: 10px;
-    -webkit-box-shadow: 4px 4px 13px 0px #6b6b6b;
-    box-shadow: 4px 4px 13px 0px #6b6b6b;
+  background-color: #27f4bd;
+  width: calc(100vw / 3);
+  /* min-width: 400px; */
+  height: fit-content;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 13px 0px #6b6b6b;
+  box-shadow: 4px 4px 13px 0px #6b6b6b;
 }
 
 .section-header {
-    background-color: #0000ff;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    border-radius: 10px 10px 0 0;
+  background-color: #0000ff;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px 10px 0 0;
 }
 
 .section-body {
-    padding: 20px;
-    font-size: 18px;
+  padding: 20px;
+  font-size: 18px;
 }
 
 .info-icon {
-    width: 30px;
+  width: 30px;
 }
 
-.section-body>div {
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.section-body > div {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 /** FORM **/
 
 .form-body {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 
-.form-body>div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 15px auto;
-    width: 60%;
-    align-items: center;
+.form-body > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 15px auto;
+  width: 60%;
+  align-items: center;
 }
 
 .form-footer,
 .section-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .form-footer input[type="submit"],
 .form-footer a,
 .section-footer input[type="submit"],
 .section-footer a {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .form-footer a,
 .section-footer a {
-    background-color: #ffaa00;
+  background-color: #ffaa00;
 }
-
 
 /** MANTENIMIENTO PROFESOR **/
 
 .mantenim-page section {
-    width: 75%;
+  width: 75%;
 }
 
 .mantenim-page .section-body {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .mantenim-page .section-body .column {
-    flex: 50%;
-    align-items: flex-start;
+  flex: 50%;
+  align-items: flex-start;
 }
 
 .column.scrollable {
-    flex-direction: column;
-    height: 500px;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    overflow-wrap: anywhere;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
 }
 
 .section-footer {
-    padding: 0 20px 20px 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .table td {
-    padding: 2px 5px;
+  padding: 2px 5px;
 }
 
 .column.form {
-    justify-content: center;
+  justify-content: center;
 }
 
 #manteniment-profesor {
-    width: 40%;
+  width: 40%;
 }
 
 #manteniment-profesor input:not(label[for="center"], label[for="type"]) {
-    display: block;
-    margin: 10px 0;
+  display: block;
+  margin: 10px 0;
 }
 
 select {
-    margin: 10px 0;
-    width: 150px;
+  margin: 10px 0;
+  width: 150px;
 }
 
 .modificar-formador {
-    background-color: blue !important;
+  background-color: blue !important;
 }
 
 .baixa-formador {
-    background-color: red !important;
+  background-color: red !important;
 }
 
 #pagination {
-    color: #0000ff;
+  color: #0000ff;
 }
-
 
 /** MANTENIMIENTO ESCUELAS **/
 
 #mantenimiento-escuelas section {
-    width: 50%;
+  width: 50%;
 }
 
 #mantenimiento-escuelas .section-body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #mantenimiento-escuelas input {
-    height: 40px;
+  height: 40px;
 }
 
 #addCenter,
 .modifyCenter,
 .deleteCenter {
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #mantenimiento-escuelas #addCenter {
-    background-color: #4caf50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
 
 #mantenimiento-escuelas .modifyCenter {
-    background-color: #0000ff;
-    color: white;
+  background-color: #0000ff;
+  color: white;
 }
 
 #mantenimiento-escuelas .deleteCenter {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
 }
 
 .back {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 
 /** Mantenimiento Estudiantes **/
 
 #mantenimiento-estudiantes section {
-    width: 80%;
+  width: 80%;
 }
 
 .nav {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .nav-item {
-    margin-left: 10px;
-    padding-right: 10px;
-    border-right: 1px solid white;
+  margin-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid white;
 }
 
 .nav-item:last-of-type {
-    border: none;
+  border: none;
 }
 
 .nav a {
-    color: lightcyan;
+  color: lightcyan;
 }
 
 .inactive-link {
-    pointer-events: none;
-    cursor: default;
-    color: grey!important;
+  pointer-events: none;
+  cursor: default;
+  color: grey !important;
 }
 
 .component-container {
-    border: 1px solid grey;
-    flex-direction: column;
-    justify-content: unset!important;
-    height: fit-content;
-    padding: 5px 0;
-    position: relative;
+  border: 1px solid grey;
+  flex-direction: column;
+  justify-content: unset !important;
+  height: fit-content;
+  padding: 5px 0;
+  position: relative;
 }
 
 .component-container h3 {
-    margin: 4px 0;
+  margin: 4px 0;
 }
 
 .firstFields {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #formAlta input,
 #formAlta select {
-    display: block;
+  display: block;
 }
 
 #formAlta .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
 }
 
 #formAlta input[type="submit"],
 #formAlta input[type="reset"] {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 #formAlta input[type="reset"] {
-    background-color: #ffaa00;
+  background-color: #ffaa00;
+}
+
+#avatar-container,
+#avatar {
+  height: 100px;
+  width: 100px;
+}
+
+#modificar,
+#baixa {
+  margin-top: 20px;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#modificar {
+  background-color: #0000ff;
+}
+
+#baixa {
+  background-color: red;
 }

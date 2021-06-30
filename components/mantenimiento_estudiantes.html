@@ -1,5 +1,6 @@
 <h3>Baixa / modificació estudiants</h3>
 <form id="formMantenimiento">
+    <input type="hidden" name="id" id="id">
     <div class="firstFields">
         <div>
             <div>
@@ -15,7 +16,7 @@
                 <input id="email" name="email" type="text">
             </div>
         </div>
-        <div>
+        <div id="avatar-container">
             <img id="avatar" src="../img/icono_ayuda.png" alt="asdad">
         </div>
 
@@ -43,7 +44,7 @@
     <div>
         <label for="groups">Grups Alumne: </label>
         <select id="groups" name="groups" multiple size="3" disabled>
-            <option value=""></option>
+            
         </select>
     </div>
 
