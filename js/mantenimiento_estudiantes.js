@@ -44,7 +44,6 @@ async function consultaProfesores() {
     "json"
   )
     .then((profesores) => {
-      selectProfesores.removeAttribute("disabled");
       profesores.forEach(
         (profesor) =>
           (selectProfesores.innerHTML += `<option value="${profesor.idteacher}">${profesor.nombre}</option>`)
@@ -52,7 +51,6 @@ async function consultaProfesores() {
     })
     .catch((error) => alert(error));
 
-  // selectProfesores.onchange = handleChange;
 }
 
 async function consultaAlumno(id) {
@@ -68,7 +66,6 @@ async function consultaAlumno(id) {
     "json"
   )
     .then((alumno) => {
-      console.log(alumno);
       document.querySelector("#id").value = alumno[0].idalumno;
       document.querySelector("#name").value = alumno[0].nombre;
       document.querySelector("#user").value = alumno[0].user;
@@ -101,7 +98,6 @@ async function consultaGruposAlumno(id, idprofesor) {
   )
     .then((grupos) => {
       document.querySelector("#groups").innerHTML = ``;
-      console.log("Grupos: ", grupos);
       grupos.forEach((grupo) => {
         document.querySelector(
           "#groups"
@@ -138,10 +134,10 @@ async function consultaGruposProfesor(idprofesor) {
 }
 
 function modificarEstudiant() {
-  // if (!validarCampos()) {
-  //   alert("uno o mas campos son invalidos");
-  //   return;
-  // }
+  if (!validarCampos()) {
+    alert("uno o mas campos son invalidos");
+    return;
+  }
 
   let data = {
     nombre: document.querySelector("#name").value,
@@ -149,9 +145,12 @@ function modificarEstudiant() {
     usuario: document.querySelector("#user").value,
     profesor: document.querySelector("#teacher").value,
     idalumno: document.querySelector("#id").value,
-    // foto: document.querySelector("#image").value,
     grupo: document.querySelector("#changeTo").value,
   };
+
+  if (document.querySelector("#image").files[0]) {
+    data.foto = document.querySelector("#image").files[0]
+  }
 
   ajaxRequest(
     "https://alcyon-it.com/PQTM/pqtm_modificacion_alumnos.php",
@@ -160,12 +159,46 @@ function modificarEstudiant() {
     "text"
   )
     .then((res) => {
-      console.log(res);
       if (res.substring(0, 2) !== "00") throw res.substring(3);
       alert(res.substring(3));
       init();
     })
     .catch((error) => alert(error));
+}
+
+function validarCampos() {
+  let form = document.querySelector('#formMantenimiento')
+
+  if (form.checkValidity()) {
+    if (
+      !form.name.value ||
+      !form.user.value ||
+      !form.email.value ||
+      !form.teacher.value ||
+      !form.id.value ||
+      !form.changeTo.value
+    ) {
+      console.log("hay almenos un campo que no esta informado");
+      return false;
+    }
+
+    if (!form.teacher.getAttribute('disabled')) {
+      alert("No puedes cambiar el profesor asignado al alumno")
+      return false;
+    }
+
+    let regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g;
+    if (!regex.test(form.email.value)) {
+      form.email.setCustomValidity("El email no tiene el formato correcto");
+      form.reportValidity();
+      return false;
+    }
+  } else {
+    form.reportValidity();
+    return false;
+  }
+  return true;
+
 }
 
 function baixaEstudiant() {
@@ -198,5 +231,3 @@ function validarId(id) {
   if (!id) return false;
   return true;
 }
-
-function validarCampos() {}
